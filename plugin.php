@@ -36,7 +36,7 @@ function slug_get_similarposts( WP_REST_Request $request ) {
             $similarpost['url'] = $node->div[0]->a;
             $similarpost['title'] = $node->div[1]->a;
             $similarpost['summary'] = $node->div[1]->p;
-            $similarpost['thumb_url'] = $node->div[0]->a;
+            $similarpost['thumb_url'] = $node->div[0]->a->img;
             $results[] = $similarpost;
         }
     }
